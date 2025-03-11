@@ -1,145 +1,14 @@
-\documentclass{article}
-\usepackage{amsfonts}
-\usepackage{amsmath}
-\usepackage{amssymb}
-\usepackage{mathrsfs}
-\usepackage{extarrows}
-\usepackage{hyperref}
-\usepackage[utf8]{inputenc}
-\usepackage{graphicx}
-\usepackage{mathtools}
-\usepackage[a4paper, total={6in, 8in}]{geometry}
-\usepackage[table]{xcolor}
-\usepackage{tikz}
-\usepackage{cancel}
-\usepackage{steinmetz}
-\usepackage{diagbox}
-\usepackage{siunitx}
-\usepackage{eurosym}
-\usepackage{pgfplots}
-\pgfplotsset{width=10cm,compat=1.9}
-\usetikzlibrary{shapes,arrows}
-\usepackage{listings}
-\usepackage{color}
-\lstset{literate={á}{{\'a}}1 {é}{{\'e}}1 {í}{{\'\i}}1 {ó}{{\'o}}1 {ú}{{\'u}}1
-  {Á}{{\'A}}1 {É}{{\'E}}1 {Í}{{\'I}}1 {Ó}{{\'O}}1 {Ú}{{\'U}}1
-  {à}{{\`a}}1 {è}{{\`e}}1 {ì}{{\`\i}}1 {ò}{{\`o}}1 {ù}{{\`u}}1
-  {À}{{\`A}}1 {È}{{\`E}}1 {Ì}{{\`I}}1 {Ò}{{\`O}}1 {Ù}{{\`U}}1
-  {ä}{{\"a}}1 {ë}{{\"e}}1 {ï}{{\"\i}}1 {ö}{{\"o}}1 {ü}{{\"u}}1
-  {Ä}{{\"A}}1 {Ë}{{\"E}}1 {Ï}{{\"I}}1 {Ö}{{\"O}}1 {Ü}{{\"U}}1
-  {â}{{\^a}}1 {ê}{{\^e}}1 {î}{{\^\i}}1 {ô}{{\^o}}1 {û}{{\^u}}1
-  {Â}{{\^A}}1 {Ê}{{\^E}}1 {Î}{{\^I}}1 {Ô}{{\^O}}1 {Û}{{\^U}}1
-  {ã}{{\~a}}1 {ẽ}{{\~e}}1 {ĩ}{{\~\i}}1 {õ}{{\~o}}1 {ũ}{{\~u}}1
-  {Ã}{{\~A}}1 {Ẽ}{{\~E}}1 {Ĩ}{{\~I}}1 {Õ}{{\~O}}1 {Ũ}{{\~U}}1
-  {œ}{{\oe}}1 {Œ}{{\OE}}1 {æ}{{\ae}}1 {Æ}{{\AE}}1 {ß}{{\ss}}1
-  {ű}{{\H{u}}}1 {Ű}{{\H{U}}}1 {ő}{{\H{o}}}1 {Ő}{{\H{O}}}1
-  {ç}{{\c c}}1 {Ç}{{\c C}}1 {ø}{{\o}}1 {Ø}{{\O}}1 {å}{{\r a}}1 {Å}{{\r A}}1
-  {€}{{\euro}}1 {£}{{\pounds}}1 {«}{{\guillemotleft}}1
-  {»}{{\guillemotright}}1 {ñ}{{\~n}}1 {Ñ}{{\~N}}1 {¿}{{?`}}1 {¡}{{!`}}1 
-}
-\lstset{language=HTML}
-%lingue supportate:
-%ABAP
-%ACSL
-%Ada
-%Algol
-%Ant
-%Assembler
-%Awk
-%bash
-%Basic
-%C#5
-%C++
-%C
-%Caml
-%Clean
-%Cobol
-%Comal
-%csh
-%Delphi
-%Eiffel
-%Elan
-%erlang
-%Euphoria
-%Fortran
-%GCL
-%Go (golang)
-%Gnuplot
-%Haskell
-%HTML
-%IDL
-%inform
-%Java
-%JVMIS
-%ksh
-%Lisp
-%Logo
-%Lua
-%make
-%Mathematica
-%Matlab
-%Mercury
-%MetaPost
-%Miranda
-%Mizar
-%ML
-%Modelica
-%Modula-2
-%MuPAD
-%NASTRAN
-%Oberon-2
-%Objective C
-%OCL
-%Octave
-%Oz
-%Pascal
-%Perl
-%PHP
-%PL/I
-%Plasm
-%POV
-%Prolog
-%Promela
-%Python
-%R
-%Reduce
-%Rexx
-%RSL
-%Ruby
-%S4
-%SAS
-%Scilab
-%sh
-%SHELXL
-%Simula
-%SQL
-%tcl4
-%TeX
-%VBScript
-%Verilog
-%VHDL
-%VRML
-%XML
-%XSLT
-
-\newcommand{\acapo}{\\\hspace*{1cm}\\}
-\newcommand{\Eaccentata}{$\grave{\text{E}}$ }
-\newcommand{\vopen}{``}
-\newcommand{\apexopen}{`}
-\newcommand{\vclose}{''}
-\newcommand{\vclosespace}{'' }
-\newcommand{\indenta}{\hspace*{1cm}}
-\newcommand{\define}{\underline{Def:} }
-
-\setlength{\parindent}{0cm}
 % chktex-file 44
 % chktex-file 36
 % chktex-file 1
 % chktex-file 26
-\hfuzz=100pt
+% chktex-file 18
+% chktex-file 42
+% chktex-file 4
+\documentclass{article}
+\input{packages}
 
 \title{Processi software\\\normalsize Analisi e progettazione del software}
-\author{Flavio Colacicchi}
 \date{06/03/2025}
 \begin{document}
 \maketitle
@@ -219,5 +88,6 @@ Le varie discipline di UP hanno un peso diverso lungo il processo
   \includegraphics[width=10cm]{images/discipline up nello sviluppo.png}
 \end{center}
 \newpage
-Un metodo \textbf{agile} è una forma di sviluppo iteragtivo in grado di rispondere in modo rapido e flessibile ai cambiamenti
+Un metodo \textbf{agile} è una forma di sviluppo iteragtivo in grado di rispondere in modo rapido e flessibile ai cambiamenti.\acapo
+Nello sviluppo vi è una breve iterazione 0 in cui abbiamo una prima analisi dei beneifici ma l'attività più importante di questa iterazione è l'analisi economica del bilancio costi\textendash benefici
 \end{document}
