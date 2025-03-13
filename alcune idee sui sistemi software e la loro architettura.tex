@@ -1,0 +1,71 @@
+% chktex-file 1
+\documentclass{article}
+\input{packages}
+
+\title{Alcune idee sui sistemi software e la loro architettura\\\normalsize Analisi e progettazione del software}
+\date{13/03/2025}
+\begin{document}
+\maketitle
+La scelta dell'architettura è una scelta scruciale da fare all'inizio dello sviluppo e che sarà difficile da cambiare in seguito, un'architettura comunq è quella a strati che interagiscono al seguente modo: gli strati alti possono fare chiamate a quelli più bassi ma non è vero il contrario. Una possibile scelta, minimale ma comune è la seguente
+\begin{itemize}
+    \item Presentazione\\
+        UI e ha lo scopo di capire cosa vuole fare l'utente per poi fare una chiamata allo strato sottostante
+    \item Lgica applicativa\\
+        Delega la richiesta alla base di dati da cui otterrà dei dati che elabora e restituisce allo strato superiore per la presentazione all'utente    
+    \item Accesso alla base di dati e altri servizi tecnici
+\end{itemize}
+\begin{center}
+    \includegraphics[width=10cm]{images/architettura a strati.png}
+\end{center}
+La scelta del modo in cui è organizzato lo strato della logica operativa influisce pesantemente sul metodo per l'analisi del softawre, ci sono diversti approcci:
+\begin{itemize}
+    \item Approccio \vopen tradizionale\vclose
+        \begin{itemize}
+            \item I dati sono gesitit da una base di dati
+            \item Le operazioni sono transazioni sulla base di dati, ciascun oggetto/classe della logica applicativa corrisponde a una procedura/transazione che l'utente può richiedere al sistema\\
+            \includegraphics[width=6cm]{images/approccio tradizionale.png}
+        \end{itemize}
+    \item Approccio \vopen procedurale\vclose
+        \begin{itemize}
+            \item I dati sono gestiti in memoria principale
+            \item Alcuni oggetti sono usati per rappresentarre dati/informazioni
+            \item Altri oggetti (separati) definiscono le operazioni che possono essere applicate alle informazioni, a maggior parte di questi oggetti di dominio incapsulano sia dati che operazioni\\
+            \includegraphics[width=6cm]{images/approccio procedurale.png}
+        \end{itemize}
+    \item Domani model
+        \begin{itemize}
+            \item lo strato della logica applicativa è realizzato a oggetti che si ripartiscono le responsabilità del sistema
+            \item lo strato della logica applicativa viene anche chiamato strato
+            di dominio\\
+            \includegraphics[width=6cm]{images/strato di dominio.png}
+        \end{itemize}
+\end{itemize}
+\Large Per quanto riguarda l'organizzazione della logica applicativa, questo corso fa riferimento alla strategia Domain Model\normalsize\acapo
+In generale un'applicazione software offre ai suoi utilizzatori un certo numero di funzionalità che sono relative alla gestione di alcuni tipi di informazioni (dati).\newpage
+\Eaccentata utile distinguere tra due tipologie principali:
+\begin{itemize}
+    \item Applicazioni stand-alone (monopoly)\\
+        Applicazioni mono-utente i cui dati non sono condivisi con utenti diversi della stessa applicazione
+        \begin{center}
+            \includegraphics[width=6cm]{images/applicazioni standalone.png}
+        \end{center}
+    \item Applicazioni client-server\\
+        Applicazioni che possono essere accedute in modo concorrente da più utenti tramite acesso in rete o sul web\\
+        Queste applicazioni gestiscono in genere anche i dati che devono essere condivisi dall'utente
+        \begin{center}
+            \includegraphics[width=6cm]{images/applicazioni client server.png}
+        \end{center}
+\end{itemize}
+Per la progettazione
+\begin{itemize}
+    \item Il caso di un'applicazione stand-alone è relativamente semplice\\
+        \Eaccentata infatti sufficiente pensare a una singola istanza/esecuzione dellapplicazione, dal punto di vista di un singolo utente
+    \item Il caso di un'applicazione client server è molto più complesso\\
+        Da una parte, l'applicazione deve gestire alcuni dati condivisi tra tutti i suoi utenti/client\\
+        Inoltre, per ciascun utente/client, l'applicazione deve gestire alcuni dati specifici per la conversazione/sessione con quel particolare client
+\end{itemize}
+Dunque un'applicazione client/server per quanto riguarda lo stato delle sessioni in questo corso ipotiziamo di utilizzare una tecnologia che consenta di ragionare (e scrivere programmi) in termini di singola conversazione/sessione. Una soluzione comune è l'introduzione di un ulteriore strato (\vopen application\vclose) tra quello di presentazione e quello della logica
+\begin{center}
+    \includegraphics[width=8cm]{images/application layer.png}
+\end{center}
+\end{document}

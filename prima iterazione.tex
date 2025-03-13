@@ -1,0 +1,78 @@
+% chktex-file 1
+% chktex-file 26
+% chktex-file 44
+\documentclass{article}
+\input{packages}
+
+\title{Prima iterazione\\\normalsize Analisi e progettazione del software}
+\date{13/03/2025}
+\begin{document}
+\maketitle
+L'analisi enfatizza un'investigazione di un problema e dei suoi requisiti, ovvero si focalizza sul che cosa e non sul come, e non è direttamente interessata alle soluzioni del problema.\acapo
+Esistono diversi modi per effettuare l'analisiciascuno dei quali è in qualche modo legato a una “strategia risolutiva” che si vuole adottare o a uno specifico “tipo di sistema” che si vuole realizzare\acapo
+L'analisi orientata agli oggetti (OOA) si basa principalmente sull'identificazione dei concetti nel dominio del problema e su una loro descrizione a oggetti\acapo
+L'analisi del software ha lo scopo di comprendere il problema e si deve focalizzare su tre aspetti
+\begin{enumerate}
+    \item Le inormazioni che il sistema deve gestire (dominio informativo)\\
+        Rappresentato attraverso il modello di dominio
+    \item Le funzioni (o operazioni) che il sistema dovrà gestire (alterazioni al dominio informativo)\\
+        Rappresentate con operazioni di sistema e diagrammi di sequenza di sistema
+    \item Il comportamento del sistema (come cambia la rappresentazione del sistema a seguito di operazioni)\\
+        Rappresentato tramite contratti
+\end{enumerate}
+Lo scopo della modellazione è comprendere e favorire la comunicazione.\acapo
+Il dominio del problema è simile alla progettazione concettuale delle basi di dati:
+\begin{itemize}
+    \item Rappresentare le specifiche formali della realtà di interesse
+    \item In termini di una descrizione formale e compatta
+    \item Indipendente dai scriteri di rappresentazione utilizzati nei sistemi di gestione
+\end{itemize}
+Mentre nella modellazione del dominio
+\begin{itemize}
+    \item 
+\end{itemize}
+\begin{center}
+    \begin{tabular}{p{0.5\textwidth}|p{0.5\textwidth}}
+        basi di dati & ingegneria del software\\
+        \hline
+        i diagrammi si chiamano schemi & i diagrammi si chiamano modelli\\
+        formalismi per esprimere schemi si chiamano modelli (e.g. Schemi E.R.) & i formalismi per esprimere i modelli si chiamano linguaggi (e.g. UML)
+    \end{tabular}
+    \begin{tabular}{p{0.5\textwidth}|p{0.5\textwidth}}
+        ER & UML\\
+        \hline
+        Un'entità rappresenta una classe di oggetti che hanno proprietà comune & una classe concettuale
+        rappresenta un insieme di
+        cose o concetti con
+        caratteristiche simili\\
+        \includegraphics[width=3cm]{images/er.png} & \includegraphics[width=3cm]{images/uml.png}\\
+        le relative istanze sono chiamate istanze o occorrenze & le relative istanze sono chiamate istanze o oggetti\\
+        un attributo descrive una proprietà elementare di un'entità o di una relazione & un attributo rappresenta una proprietà elementare degli oggetti di una classe\\
+        \includegraphics[width=3cm]{images/er2.png} & \includegraphics[width=3cm]{images/uml2.png}\\
+        una relazione rappresenta un legame logico tra due o più entità & un'associazione rappresenta una relazione (una connessione significativa) tra classi e le istanze si chiamano collegamenti\\
+        \includegraphics[width=3cm]{images/er3.png} & \includegraphics[width=3cm]{images/uml3.png}
+    \end{tabular}
+    \begin{tabular}{p{0.5\textwidth}|p{0.5\textwidth}}
+        le relazioni possono essere binarie o anche N-arie & le associazioni sono in genere binarie e le associazioni N-arie sono possibili, ma poco comuni\\
+        Le relazioni possono avere attributi & è possibile rappresentare associazioni con attributi, ma è poco comune\\
+        il nome è generalmente un sostantivo che indica una relazione & il nome è generalmente un verbo che indica una relazione\\
+        per ciascuna entità va indicato (almeno) un identificatore & è possibile associare identificatori alle classi, ma è poco comune\\
+        \includegraphics[width=4cm]{images/er4.png} & \includegraphics[width=3cm]{images/uml4.png}\\
+        una cardinalità caratterizza la partecipazione (minima e massima) di un'entità a una relazione & una molteplicità indica quante istanze di una classe possono essere associate a un'istanza dell'altra classe\\
+        \includegraphics[width=4cm]{images/er5.png} & \includegraphics[width=3cm]{images/uml5.png}
+    \end{tabular}
+    \includegraphics[width=\textwidth]{images/er-uml.png}
+    \begin{tabular}{p{0.5\textwidth}|p{0.5\textwidth}}
+        per rappresentare solo informazioni che devono essere gestite in modo persistente & per rappresentare tutte le informazioni che devono essere gestite da un'applicazione\\
+        un'entità rappresenta sia una classe di istanze che il relativo \vopen insieme\vclose & una classe rappresenta una classe di oggetti ma non il relativo \vopen insieme\vclose\\
+        in genere nessuna entità ha una sola istanza & può essere ok avere classi che hanno un solo oggetto\\
+        le entità hanno in genere almeno un attributo & può essere ok avere classi senza attributi con cautela\\
+        le entità rappresentano informazioni & può essere ok avere classi che rappresentano solo comportamento con cautela
+    \end{tabular}
+\end{center}
+Esempio di rappresnetazione tramite UML di un dominio
+\begin{center}
+    \includegraphics[width=\textwidth]{images/esempio dominio di informazione.png}
+\end{center}
+Notare che i \textbf{:} sono \textbf{obbligatori per la definizione di un oggetto} mentre sono \textbf{vietati denna definizione di una classe}
+\end{document}
