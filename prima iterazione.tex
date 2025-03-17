@@ -33,41 +33,38 @@ Mentre nella modellazione del dominio
 \end{itemize}
 \begin{center}
     \begin{tabular}{p{0.5\textwidth}|p{0.5\textwidth}}
-        basi di dati & ingegneria del software\\
+        Basi di dati & Ingegneria del software\\
         \hline
-        i diagrammi si chiamano schemi & i diagrammi si chiamano modelli\\
-        formalismi per esprimere schemi si chiamano modelli (e.g. Schemi E.R.) & i formalismi per esprimere i modelli si chiamano linguaggi (e.g. UML)
+        I diagrammi si chiamano schemi & I diagrammi si chiamano modelli\\
+        Formalismi per esprimere schemi si chiamano modelli (e.g. Schemi E.R.) & I formalismi per esprimere i modelli si chiamano linguaggi (e.g. UML)
     \end{tabular}
     \begin{tabular}{p{0.5\textwidth}|p{0.5\textwidth}}
         ER & UML\\
         \hline
-        Un'entità rappresenta una classe di oggetti che hanno proprietà comune & una classe concettuale
-        rappresenta un insieme di
-        cose o concetti con
-        caratteristiche simili\\
-        \includegraphics[width=3cm]{images/er.png} & \includegraphics[width=3cm]{images/uml.png}\\
-        le relative istanze sono chiamate istanze o occorrenze & le relative istanze sono chiamate istanze o oggetti\\
-        un attributo descrive una proprietà elementare di un'entità o di una relazione & un attributo rappresenta una proprietà elementare degli oggetti di una classe\\
-        \includegraphics[width=3cm]{images/er2.png} & \includegraphics[width=3cm]{images/uml2.png}\\
-        una relazione rappresenta un legame logico tra due o più entità & un'associazione rappresenta una relazione (una connessione significativa) tra classi e le istanze si chiamano collegamenti\\
-        \includegraphics[width=3cm]{images/er3.png} & \includegraphics[width=3cm]{images/uml3.png}
+        Un'entità rappresenta una classe di oggetti che hanno proprietà comune & Una classe concettuale rappresenta un insieme di cose o concetti con caratteristiche simili\\
+        \multicolumn{1}{c|}{\includegraphics[width=3cm]{images/er.png}} & \multicolumn{1}{c}{\includegraphics[width=3cm]{images/uml.png}}\\
+        Le relative istanze sono chiamate istanze o occorrenze & Le relative istanze sono chiamate istanze o oggetti\\
+        Un attributo descrive una proprietà elementare di un'entità o di una relazione & Un attributo rappresenta una proprietà elementare degli oggetti di una classe\\
+        \multicolumn{1}{c|}{\includegraphics[width=3cm]{images/er2.png}} & \multicolumn{1}{c}{\includegraphics[width=3cm]{images/uml2.png}}\\
+        Una relazione rappresenta un legame logico tra due o più entità & Un'associazione rappresenta una relazione (una connessione significativa) tra classi e le istanze si chiamano collegamenti\\
+        \multicolumn{1}{c|}{\includegraphics[width=3cm]{images/er3.png}} & \multicolumn{1}{c}{\includegraphics[width=3cm]{images/uml3.png}}
     \end{tabular}
     \begin{tabular}{p{0.5\textwidth}|p{0.5\textwidth}}
-        le relazioni possono essere binarie o anche N-arie & le associazioni sono in genere binarie e le associazioni N-arie sono possibili, ma poco comuni\\
-        Le relazioni possono avere attributi & è possibile rappresentare associazioni con attributi, ma è poco comune\\
-        il nome è generalmente un sostantivo che indica una relazione & il nome è generalmente un verbo che indica una relazione\\
-        per ciascuna entità va indicato (almeno) un identificatore & è possibile associare identificatori alle classi, ma è poco comune\\
-        \includegraphics[width=4cm]{images/er4.png} & \includegraphics[width=3cm]{images/uml4.png}\\
-        una cardinalità caratterizza la partecipazione (minima e massima) di un'entità a una relazione & una molteplicità indica quante istanze di una classe possono essere associate a un'istanza dell'altra classe\\
-        \includegraphics[width=4cm]{images/er5.png} & \includegraphics[width=3cm]{images/uml5.png}
+        Le relazioni possono essere binarie o anche N-arie & Le associazioni sono in genere binarie e le associazioni N-arie sono possibili, ma poco comuni\\
+        Le relazioni possono avere attributi & \Eaccentata possibile rappresentare associazioni con attributi, ma è poco comune\\
+        Il nome è generalmente un sostantivo che indica una relazione & Il nome è generalmente un verbo che indica una relazione\\
+        Per ciascuna entità va indicato (almeno) un identificatore & \Eaccentata possibile associare identificatori alle classi, ma è poco comune\\
+        \multicolumn{1}{c|}{\includegraphics[width=4cm]{images/er4.png}} & \multicolumn{1}{c}{\includegraphics[width=3cm]{images/uml4.png}}\\
+        Una cardinalità caratterizza la partecipazione (minima e massima) di un'entità a una relazione & Una molteplicità indica quante istanze di una classe possono essere associate a un'istanza dell'altra classe\\
+        \multicolumn{1}{c|}{\includegraphics[width=4cm]{images/er5.png}} & \multicolumn{1}{c}{\includegraphics[width=3cm]{images/uml5.png}}
     \end{tabular}
     \includegraphics[width=\textwidth]{images/er-uml.png}
     \begin{tabular}{p{0.5\textwidth}|p{0.5\textwidth}}
-        per rappresentare solo informazioni che devono essere gestite in modo persistente & per rappresentare tutte le informazioni che devono essere gestite da un'applicazione\\
-        un'entità rappresenta sia una classe di istanze che il relativo \vopen insieme\vclose & una classe rappresenta una classe di oggetti ma non il relativo \vopen insieme\vclose\\
-        in genere nessuna entità ha una sola istanza & può essere ok avere classi che hanno un solo oggetto\\
-        le entità hanno in genere almeno un attributo & può essere ok avere classi senza attributi con cautela\\
-        le entità rappresentano informazioni & può essere ok avere classi che rappresentano solo comportamento con cautela
+        Per rappresentare solo informazioni che devono essere gestite in modo persistente & Per rappresentare tutte le informazioni che devono essere gestite da un'applicazione\\
+        Un'entità rappresenta sia una classe di istanze che il relativo \vopen insieme\vclose & Una classe rappresenta una classe di oggetti ma non il relativo \vopen insieme\vclose\\
+        In genere nessuna entità ha una sola istanza & Può essere ok avere classi che hanno un solo oggetto\\
+        Le entità hanno in genere almeno un attributo & Può essere ok avere classi senza attributi con cautela\\
+        Le entità rappresentano informazioni & Può essere ok avere classi che rappresentano solo comportamento con cautela
     \end{tabular}
 \end{center}
 Esempio di rappresnetazione tramite UML di un dominio

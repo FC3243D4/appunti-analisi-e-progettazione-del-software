@@ -1,0 +1,61 @@
+% chktex-file 1
+% chktex-file 13
+% chktex-file 26
+\documentclass{article}
+\input{packages}
+
+\title{Modellazione di dominio\\\normalsize Analisi e progettazione del software}
+\date{17/03/2025}
+\begin{document}
+\maketitle
+Un modello di dominio è un modello concettuale a oggetti che descrive le informazioni che devono essere gestite dal sistema, quindi il nome corretto dovrbebe essere \textbf{modello delle informazioni di dominio}, rappresentato con un diagramma UML visualizzando classi, associazioni e attributi concettuali del dominio del problema, ed è anche un dizionario visuale del linguaggio di dominio.\acapo
+Si tratta dell'elaborato più importante dell'OOA ed è sviluppato in modo iterativo e incrementale limitato dai requisiti dell'iterazione corrente.\\
+Eccone un esempio (parziale) basato sul sistema POS
+\begin{center}
+    \includegraphics[width=\textwidth]{images/modello di dominio parziale pos.png}
+\end{center}
+Il diagramma delle classi è un termine di UML, il modello di dominio (ovvero un caso particolare del diagramma delle classi) è un termine di UP. \Eaccentata importante ricordare che questo modello è un'astrazione di oggetti reali, non diagrammi precisi di classi software, non si tratta neanche di un modello di dati, questo descrive (solo) le informazioni persistenti\footnote{Ricordato dopo l'esecuzione di ciascuna transazione/istanza di caso d'uso} di un'applicazione mentre un modello di dominio tratta tutte le informazioni che deve gestire un sistema, anche quelle transienti\footnote{Ricordato tra passi diversi dell'esecuzione di un caso d'uso} ma non quelle \vopen locale\vclosespace\footnote{Ricordato (solo) entro un singolo passo dell'esecuzione di un caso d'uso}.\acapo
+Nella pratica ci sono due utilizzi del termine \vopen modello di dominio\vclose:
+\begin{itemize}
+    \item in UP (e in quesgto corso)\\
+        descrizione concettuale degli oggetti del mondo reale di interesse
+    \item Nel software\\
+        Strato software composto dalle classi software usate per rappresentare oggetti del mondo reale\\
+        Chiamato anche strato del dominio, composto da oggetti di dominio
+\end{itemize}
+Perché creare un modello di dominio?
+\begin{itemize}
+    \item Nell'analisi
+        \begin{itemize}
+            \item Per comprendere il dominio del sistema da realizzare e il suo vocabolario
+            \item Per definire un linguaggio comune che abiliti la comunicazione tra le varie parti interessate
+        \end{itemize}
+    \item Per la progettazione\begin{itemize}
+        \item Come fonte di ispirazione per progettare lo strato del dominio
+        \item Per mantenere basso il salto rappresentazionale
+        \item Per abilitare lo sviluppo di un sistema software facilmente comprensibile, modificabile ed evolvibile, è opportuno che una porzione del sistema rifletta il modello di dominio in modo piuttosto accurato [DDD]\footnote{Domain Driven Design}
+    \end{itemize}
+\end{itemize}
+Il salto rappresentazionale è la distanza tra il nostro modello mentale del dominio e la rappresentazione del dominio mediante il software. Vantaggi di un salto rappresentazionale basso
+\begin{itemize} 
+    \item Assegnazione di responsabilità guidata dal nostro modello mentale del dominio
+    \item Comprensibilità e modificabilità del progetto e del codice
+\end{itemize}
+\begin{center}
+    \includegraphics[width=7cm]{images/salto rappresentazionale basso.png}
+\end{center}
+Diagramma UML di una classe
+\begin{center}
+    \includegraphics[width=\textwidth]{images/uml class.png}
+\end{center}
+In UML, possiamo usare un diagramma degli oggetti
+\begin{itemize}
+    \item In diagramma degli oggetti di dominio rappresenta, in modo visuale, un insieme di oggetti di esempio del mondo reale, nel contesto del dominio del problema
+    \item \Eaccentata un grafo, che rappresenta oggetti, collegamenti e valor
+\end{itemize}
+\begin{center}
+    \includegraphics[width=\textwidth]{images/classi e oggetti concettuali.png}
+\end{center}
+\Large\textbf{Gli oggetti sono distinti dall'uso di :}\normalsize\\
+
+\end{document}
