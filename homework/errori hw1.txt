@@ -1,0 +1,23 @@
+- non ho messo le classi "Descrizione pizza" e "Descrizione prodotto aggiuntivo"
+- ho chiamato la classe "Descrizione pizza" "Pizza" dandole un nome ambiguo
+- ho collegato erroneamente "Pizzeria" a "Acme Pizza" invece che a "Pizza Delivery" con l'associazione "Partner"
+- avrei dovuto chiamare "Offre" invece di "Ha" l'associazione tra "Pizzera" e "Menu"
+- avrei dovuto chiamare la relazione tra la classe "Menu" e "Descrizione Pizza" (erroneamente chiamata "Pizza") "Contiene" invece di "Include", e la stessa cosa è valida per la relazione tra "Menu" e "Descrizione Prodotto aggiuntivo" (erroneamente chiamata "Prodotto aggiuntivo")
+- non ho associato "Pizza Delivery" e "Titolare" (?)
+- non ho creato un'associazione ordinata 1-12 "Più recente {ordered}" tra "Pizza Delivery" e "Pizzeria" per le 12 pizzerie più recenti
+- non ho messo l'attributo "password" a "Cliente"
+- avrei dovuto chiamare "Ha effettuato" l'associazione tra "Cliene" e "Ordine"
+- avrei dovuto associare "Cliente" e "Pizza Delivery" con l'associazione "è cliente di" anziché collegarlo a "Acme Pizza"
+- avrei dovuto chiamare "è per {ordered}" l'associazione tra "Ordine" e "Pizzeria"
+- non avrei dovuto mettere l'attributo quantità alla classe "Voce dell'ordine"
+- l'associazione tra "Ordine" e "Voce dell'ordine" dovrebbe essere una composizione
+- l'associazione tra "Voce dell'ordine" e "Descrizione pizza" (Erroneamente chiamata "Pizza") si dovrebbe chiamare "è relatova a" e dovrebbe essere 1-* ("Descrizione Pizza"-"Voce dell'ordine")
+- la classe "Voce dell'ordine" non ci dovrebbero essere attributi
+- l'associazione tra "Voce dell'ordine" e "Descrizione prodotto aggiuntivo" (Erroneamente chiamata "Prodotto aggiuntivo") si dovrebbe chiamare "è relatova a" e dovrebbe essere *-*
+- l'inidirizzo di consegna della classe "Ordine" è anche una classe tipo di dato
+- le classi "Descrizione pizza" e "Descrizione prodotto aggiuntivo" (Erroneamente chiamate "Pizza" e "Prodotto aggiuntivo") non dovrebbero essere collegate
+- avrei dovuto fare il diagramma delgi oggetti di dominio con un grafo anziché con la sintassi UML e avrei dovuto includere "Pizza Delivery"
+
+Per la prova di autovalutazione
+Se si è fatto tutto perfetto scrivere "non c'è niente da migliorare"
+Se si sono fatti errori bisogna confrontare la soluzione del docente con la proipria e analizzare ogni errore e rispondere alle domande "avrei dovuto chiamare x y" o "l'associazione tra x e y dovrebbe avere cardinalità a-b anziché c-d" e così via
