@@ -12,11 +12,13 @@
 - non avrei dovuto mettere l'attributo quantità alla classe "Voce dell'ordine"
 - l'associazione tra "Ordine" e "Voce dell'ordine" dovrebbe essere una composizione
 - l'associazione tra "Voce dell'ordine" e "Descrizione pizza" (Erroneamente chiamata "Pizza") si dovrebbe chiamare "è relatova a" e dovrebbe essere 1-* ("Descrizione Pizza"-"Voce dell'ordine")
-- la classe "Voce dell'ordine" non ci dovrebbero essere attributi
+- la classe "Voce dell'ordine" non ci dovrebbero essere attributi oltre a "totale parziale"
 - l'associazione tra "Voce dell'ordine" e "Descrizione prodotto aggiuntivo" (Erroneamente chiamata "Prodotto aggiuntivo") si dovrebbe chiamare "è relatova a" e dovrebbe essere *-*
 - l'inidirizzo di consegna della classe "Ordine" è anche una classe tipo di dato
 - le classi "Descrizione pizza" e "Descrizione prodotto aggiuntivo" (Erroneamente chiamate "Pizza" e "Prodotto aggiuntivo") non dovrebbero essere collegate
 - avrei dovuto fare il diagramma delgi oggetti di dominio con un grafo anziché con la sintassi UML e avrei dovuto includere "Pizza Delivery"
+- in "Ordine" co dovrbebe esserre un attributo "totale"
+- la classe "Gestore di Sistema" si dovrebbe chiamare soltanto "Gestore" e dovrebbe essere associato a "Pizza Delivery" con un'associazione "lavora per" e non serve associarlo a "Titolare"
 
 Per la prova di autovalutazione
 Se si è fatto tutto perfetto scrivere "non c'è niente da migliorare"
