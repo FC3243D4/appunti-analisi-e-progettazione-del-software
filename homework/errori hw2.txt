@@ -20,7 +20,7 @@ nel diagramma delle operazioni di sistema
 - avrei dovuto chiamare la risposta "menu pizze" "pizze del menu", analogamente "menu prodotti aggiuntivi" dovrebbe essere "prodotti aggiuntivi del menu"
 - avrei dovuto chiamare l'operazione inserisciProdottoAggiuntivo aggiungiProdottoAggiuntivoAllUltimaPizzaOrdinata
 - avrei dovuto aggiungere un'operazione terminaInserumentoProdottiAggiuntivi dopo il loop interno e terminaInserimentoPizze dopo il loop esterno
-- avrei dovuto raggruppar ele ultime due operazione in un'unica operazione confermaOrdine(indirizzoConsegna, dataConsegna, orarioConsegna)
+- avrei dovuto raggruppare le ultime due operazione in un'unica operazione confermaOrdine(indirizzoConsegna, dataConsegna, orarioConsegna)
 
 
 
@@ -29,7 +29,7 @@ contratti
 - il collegamento del contratto creaNuovoOrdine è tra l'ordine o e il portale acme pizza non con il cliente c
 - nello stesso contratto avrei dovuto scrivere che inizializzo gli attributi dell'ordine
 - in confermaOrdine ci dovrebbe essere la post condizione della formazione del collegamento tra il cliente c e l'ordine o
-- nel contratto di aggiunta del profotto aggiuntivo avrei dovuto scrivere che il collegamento è creato con l'ultima voce dell'ordine v dell'ordine o
+- nel contratto di aggiunta del prodotto aggiuntivo avrei dovuto scrivere che il collegamento è creato con l'ultima voce dell'ordine v dell'ordine o
 - il contratto di termina inserimento prodotti aggiuntivi ha pre condizione è la stessa di aggiungi prodotto aggiuntivo e non ha post condizione, analogo per termina inserimento pizze
 - nel contratto di inserisci pizza e conferma ordine (e di inserisci consegna) non avrei dovuto mettere nella pre condizione "relativo alla pizzeria p"
 - nel contratto di conferma ordine vengono aggiornati gli attributi dell'ordine o e collegato l'ordine o al cliente c
